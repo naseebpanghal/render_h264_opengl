@@ -1,0 +1,14 @@
+CC=gcc
+DIR=dir
+OBJ_DIR=obj
+BIN_DIR=.
+BIN_NAME=opengl_renderer
+TARGET=$(BIN_DIR)/$(BIN_NAME)
+SRC=$(wildcard *.c)
+OBJ_FILES=$(SRC:%.c=$(OBJ_DIR)/%.o)
+
+
+CFLAGS=-g -I/usr/include/ffmpeg/
+
+LIBS= -lavcodec -lavutil -lavformat -lm -lswscale -lGL -lglut -lpthread
+LDFLAGS=
